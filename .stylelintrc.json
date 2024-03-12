@@ -6,6 +6,8 @@
         "order/order": ["custom-properties", "declarations"],
         "no-duplicate-selectors": true,
         "color-no-invalid-hex": true,
+        "scss/no-global-function-names": null,
+        "declaration-empty-line-before": "never",
         "order/properties-order": [
             "content",
             "position",
