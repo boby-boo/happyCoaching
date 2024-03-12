@@ -12,6 +12,12 @@ $purple-color: #7567ca;
     align-items: $align-items;
 }
 
+@mixin template-font($size, $weight, $color) {
+    font-size: $size + px;
+    font-weight: $weight;
+    color: $color;
+}
+
 @mixin template-transition($elementAnimate) {
     transition: $elementAnimate 0.3s ease;
 }

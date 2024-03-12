@@ -1,0 +1,67 @@
+.about {
+    &-text {
+        margin-bottom: 64px;
+        text-align: center;
+
+        h2 {
+            @extend .title;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 24px;
+        margin: 0 auto 64px;
+        max-width: 778px;
+
+        li {
+            @include template-flex(space-between, flex-start);
+            gap: 24px;
+            width: 100%;
+            padding: 5px 5px 32px;
+            border-bottom: 1px solid #e4e7ec;
+
+            h3 {
+                @include template-font(18, 700, #101828);
+            }
+
+            button {
+                max-width: 24px;
+                width: 100%;
+                min-height: 26px;
+                display: inline-block;
+                opacity: 1;
+                @include template-transition(opacity);
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            p {
+                @include template-font(16, 400, inherit);
+            }
+        }
+
+        &__text {
+            @include template-flex(flex-start, flex-start);
+            flex-direction: column;
+            max-width: 693px;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.circle-minus {
+    background: url(assets/icons/circle-minus.svg) center/cover no-repeat;
+}
+
+.circle-plus {
+    background: url(assets/icons/circle-plus.svg) center/cover no-repeat;
+}

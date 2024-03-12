@@ -6,6 +6,24 @@ body {
     background-color: $light-color;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 8px;
+
+    &-thumb {
+        background-color: $accent-color;
+        border-radius: 8px;
+    }
+
+    &-track {
+        background-color: $bg-color;
+    }
+}
+
 .container {
     max-width: 1300px;
     width: 100%;
@@ -14,9 +32,13 @@ body {
 }
 
 .title {
-    font-size: 72px;
+    font-size: 48px;
     line-height: 1.2;
     color: $secondary-color;
+}
+
+.subtitle {
+    @include template-font(16, 400, transparentize($main-color, 0.5));
 }
 
 .main-button {
@@ -28,7 +50,6 @@ body {
     text-align: center;
     border-radius: 10px;
     background-color: $accent-color;
-
     @include template-transition(background-color);
 
     &:hover {
@@ -37,5 +58,23 @@ body {
 
     &:active {
         background-color: #20ad96;
+    }
+}
+
+.none {
+    display: none !important;
+}
+
+.section {
+    padding: 96px 0;
+}
+
+.icon {
+    font-size: 30px;
+    color: $accent-color;
+    @include template-transition(color);
+
+    &:hover {
+        color: $accent-color-hover;
     }
 }
