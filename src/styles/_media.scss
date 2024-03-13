@@ -119,6 +119,24 @@
 }
 
 @media (width <= 568px) {
+    .header {
+        &-nav {
+            width: 100%;
+        }
+
+        &-list {
+            a {
+                font-size: 30px;
+            }
+        }
+
+        &-button {
+            width: 299px;
+            height: 56px;
+            font-size: 20px;
+        }
+    }
+
     .results {
         &-image {
             display: none;

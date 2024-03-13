@@ -12,24 +12,6 @@
         @include template-flex(space-between, center);
     }
 
-    .logo {
-        @include template-flex(center, center);
-        column-gap: 9px;
-        color: $secondary-color;
-
-        span {
-            @include template-transition(color);
-            color: $secondary-color;
-            font-weight: 700;
-        }
-
-        &:hover {
-            span {
-                color: $accent-color-hover;
-            }
-        }
-    }
-
     &-nav__desktop {
         @include template-flex(flex-end, center);
         flex-grow: 1;
@@ -41,7 +23,7 @@
         right: 0;
         top: 0;
         height: 100%;
-        padding: 0 15px;
+        padding: 0 12px;
         @include template-flex(flex-start, center);
         flex-direction: column;
         gap: 30px;
